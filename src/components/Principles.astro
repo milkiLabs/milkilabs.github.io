@@ -1,0 +1,74 @@
+---
+import PrincipleCard from "./PrincipleCard.astro";
+
+const principles = [
+    {
+        number: "01",
+        title: "User Ownership Is Non-Negotiable",
+        description:
+            "All data belongs to you. Choose where it's stored, export it anytime, no hidden servers or proprietary formats.",
+        icon: "🔐",
+    },
+    {
+        number: "02",
+        title: "Local-First by Default",
+        description:
+            "Apps work offline first. Network is optional. Sync enhances but never controls your experience.",
+        icon: "💾",
+    },
+    {
+        number: "03",
+        title: "Sync Without Surveillance",
+        description:
+            "No centralized accounts, no mandatory cloud, no vendor-controlled backends. Devices cooperate without corporate mediation.",
+        icon: "🔄",
+    },
+    {
+        number: "04",
+        title: "Free as in Freedom",
+        description:
+            "Transparent, auditable, and forkable by default. Open source is a commitment to user sovereignty.",
+        icon: "🕊️",
+    },
+    {
+        number: "05",
+        title: "Simplicity Over Scale",
+        description:
+            "Fewer features, thoughtfully designed. Calm interfaces that respect focus instead of fragmenting it.",
+        icon: "✨",
+    },
+    {
+        number: "06",
+        title: "No Dark Patterns. Ever.",
+        description:
+            "No engagement traps, artificial friction, or data-driven coercion. Trust is earned by restraint.",
+        icon: "🛡️",
+    },
+];
+---
+
+<section id="principles" class="py-24 md:py-32 bg-cream-100">
+    <div class="max-w-6xl mx-auto px-6">
+        <!-- Section header -->
+        <div class="text-center mb-16">
+            <span
+                class="inline-block px-4 py-1.5 rounded-full bg-accent-500/10 text-accent-600 text-sm font-medium mb-4"
+                >Our Principles</span
+            >
+            <h2
+                class="font-display text-4xl md:text-5xl font-bold text-earth-900 mb-4"
+            >
+                What we stand for
+            </h2>
+            <p class="text-xl text-ink-600 max-w-2xl mx-auto text-balance">
+                These aren't just guidelines—they're non-negotiable commitments
+                that shape every decision we make.
+            </p>
+        </div>
+
+        <!-- Principles grid -->
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {principles.map((principle) => <PrincipleCard {...principle} />)}
+        </div>
+    </div>
+</section>

@@ -1,0 +1,125 @@
+---
+import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
+
+interface Props {
+    name: string;
+    tagline: string;
+    description: string;
+    link: string;
+    icon: ImageMetadata;
+    features: string[];
+    gradient: string;
+}
+
+const {
+    name,
+    tagline,
+    description,
+    link,
+    icon,
+    features,
+    gradient,
+} = Astro.props;
+---
+
+<article
+    class="group relative bg-white rounded-3xl overflow-hidden shadow-lg hover-lift border border-cream-300"
+>
+    <!-- Gradient header -->
+    <div class={`h-48 relative overflow-hidden ${gradient}`}>
+        <!-- Pattern overlay -->
+        <div
+            class="absolute inset-0 opacity-10"
+            style="background-image: radial-gradient(circle at 2px 2px, currentColor 1px, transparent 0); background-size: 20px 20px;"
+        >
+        </div>
+
+        <!-- Icon -->
+        <div class="absolute inset-0 flex items-center justify-center">
+            <div
+                class="w-24 h-24 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-500 p-4"
+            >
+                <Image src={icon} alt={`${name} icon`} class="w-full h-full object-contain" />
+            </div>
+        </div>
+
+        <!-- Floating elements -->
+        <div
+            class="absolute top-4 right-4 w-16 h-16 rounded-full bg-white/10 animate-float"
+        >
+        </div>
+        <div
+            class="absolute bottom-8 left-8 w-12 h-12 rounded-full bg-white/10 animate-float"
+            style="animation-delay: 1s"
+        >
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div class="p-8">
+        <div class="flex items-start justify-between mb-4">
+            <div>
+                <h3 class="font-display text-2xl font-bold text-earth-900">
+                    {name}
+                </h3>
+                <p class="text-earth-600 font-medium">{tagline}</p>
+            </div>
+            <a
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center gap-1 px-3 py-1.5 rounded-full bg-earth-100 text-earth-700 text-sm font-medium hover:bg-earth-200 transition-colors"
+            >
+                <span>Launch</span>
+                <svg
+                    class="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                    ></path>
+                </svg>
+            </a>
+        </div>
+
+        <p class="text-ink-600 mb-6 leading-relaxed">{description}</p>
+
+        <!-- Features -->
+        <div class="mb-6">
+            <h4
+                class="text-sm font-semibold text-earth-800 uppercase tracking-wider mb-3"
+            >
+                Key Features
+            </h4>
+            <ul class="space-y-2">
+                {
+                    features.map((feature) => (
+                        <li class="flex items-start gap-2 text-ink-600">
+                            <svg
+                                class="w-5 h-5 text-accent-500 mt-0.5 shrink-0"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M5 13l4 4L19 7"
+                                />
+                            </svg>
+                            <span>{feature}</span>
+                        </li>
+                    ))
+                }
+            </ul>
+        </div>
+
+    </div>
+</article>

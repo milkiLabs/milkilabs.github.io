@@ -1,0 +1,169 @@
+---
+// Manifesto section component
+---
+
+<section
+    id="manifesto"
+    class="py-24 md:py-32 bg-gradient-to-b from-earth-900 to-earth-950 text-cream-100 relative overflow-hidden"
+>
+    <!-- Background decoration -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+        <div
+            class="absolute top-0 left-1/4 w-96 h-96 bg-earth-700/20 rounded-full blur-3xl"
+        >
+        </div>
+        <div
+            class="absolute bottom-0 right-1/4 w-80 h-80 bg-accent-500/10 rounded-full blur-3xl"
+        >
+        </div>
+        <div
+            class="absolute inset-0 opacity-5"
+            style="background-image: linear-gradient(var(--color-cream-300) 1px, transparent 1px), linear-gradient(90deg, var(--color-cream-300) 1px, transparent 1px); background-size: 40px 40px;"
+        >
+        </div>
+    </div>
+
+    <div class="relative z-10 max-w-4xl mx-auto px-6">
+        <!-- Quote block -->
+        <div class="text-center mb-16">
+            <svg
+                class="w-16 h-16 mx-auto mb-6 text-earth-600"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+            >
+                <path
+                    d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"
+                ></path>
+            </svg>
+            <blockquote
+                class="font-display text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6"
+            >
+                Your data is not a feature.<br />
+                Your attention is not a metric.<br />
+                <span class="text-accent-400">Your life is not SaaS.</span>
+            </blockquote>
+            <p class="text-xl text-earth-300">— The Milki Labs Manifesto</p>
+        </div>
+
+        <!-- Manifesto content -->
+        <div class="grid md:grid-cols-2 gap-8 mb-16">
+            <div
+                class="bg-earth-800/50 backdrop-blur-sm rounded-2xl p-8 border border-earth-700"
+            >
+                <h3 class="font-display text-xl font-bold mb-4 text-cream-100">
+                    Why We Exist
+                </h3>
+                <p class="text-earth-300 leading-relaxed">
+                    Modern productivity software promised clarity, efficiency,
+                    and freedom. Instead, it delivered subscriptions,
+                    surveillance, lock-in, and dependency.
+                    <strong class="text-cream-200">We reject this model.</strong
+                    >
+                </p>
+            </div>
+
+            <div
+                class="bg-earth-800/50 backdrop-blur-sm rounded-2xl p-8 border border-earth-700"
+            >
+                <h3 class="font-display text-xl font-bold mb-4 text-cream-100">
+                    What We Refuse
+                </h3>
+                <ul class="space-y-2 text-earth-300">
+                    <li class="flex items-center gap-2">
+                        <span class="text-red-400">✕</span> Being an ad company
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <span class="text-red-400">✕</span> Becoming a data broker
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <span class="text-red-400">✕</span> Running a closed platform
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <span class="text-red-400">✕</span> Surveillance disguised
+                        as productivity
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Success metrics -->
+        <div
+            class="bg-gradient-to-r from-accent-600/20 to-accent-500/10 rounded-2xl p-8 border border-accent-500/30 mb-12"
+        >
+            <h3 class="font-display text-xl font-bold mb-4 text-cream-100">
+                Our Measure of Success
+            </h3>
+            <div class="grid sm:grid-cols-3 gap-6">
+                <div class="text-center">
+                    <div
+                        class="w-12 h-12 rounded-full bg-accent-500/20 flex items-center justify-center mx-auto mb-3"
+                    >
+                        <span class="text-2xl">🛡️</span>
+                    </div>
+                    <p class="text-earth-300 text-sm">
+                        Users trust the tool without reading a privacy policy
+                    </p>
+                </div>
+                <div class="text-center">
+                    <div
+                        class="w-12 h-12 rounded-full bg-accent-500/20 flex items-center justify-center mx-auto mb-3"
+                    >
+                        <span class="text-2xl">♾️</span>
+                    </div>
+                    <p class="text-earth-300 text-sm">
+                        Data outlives devices and companies
+                    </p>
+                </div>
+                <div class="text-center">
+                    <div
+                        class="w-12 h-12 rounded-full bg-accent-500/20 flex items-center justify-center mx-auto mb-3"
+                    >
+                        <span class="text-2xl">🔀</span>
+                    </div>
+                    <p class="text-earth-300 text-sm">
+                        Software can be forked and survive without us
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Call to action -->
+        <div class="text-center">
+            <p class="text-earth-300 text-lg mb-6">
+                If you believe your tools should work for you, your data should
+                stay yours, and your focus deserves respect—you are already part
+                of this.
+            </p>
+            <div
+                class="flex flex-col sm:flex-row items-center justify-center gap-4"
+            >
+                <a
+                    href="https://github.com/milkilabs"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="group flex items-center gap-2 px-6 py-3 rounded-full bg-cream-100 text-earth-900 font-semibold hover:bg-cream-200 transition-colors"
+                >
+                    Build with us
+                    <svg
+                        class="w-5 h-5 group-hover:translate-x-1 transition-transform"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+                </a>
+                <a
+                    href="/MANIFESTO.md"
+                    class="flex items-center gap-2 px-6 py-3 rounded-full border border-earth-600 text-cream-200 font-semibold hover:bg-earth-800 transition-colors"
+                >
+                    Read Full Manifesto
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

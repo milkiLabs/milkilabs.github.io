@@ -1,0 +1,177 @@
+---
+// Hero section component
+---
+
+<section
+    class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20"
+>
+    <!-- Background decoration -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+        <!-- Gradient orbs -->
+        <div
+            class="absolute top-1/4 -left-32 w-96 h-96 bg-earth-300/30 rounded-full blur-3xl animate-pulse-slow"
+        >
+        </div>
+        <div
+            class="absolute bottom-1/4 -right-32 w-80 h-80 bg-accent-400/20 rounded-full blur-3xl animate-pulse-slow"
+            style="animation-delay: 2s"
+        >
+        </div>
+        <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cream-300/50 rounded-full blur-3xl"
+        >
+        </div>
+
+        <!-- Grid pattern -->
+        <div
+            class="absolute inset-0 opacity-[0.03]"
+            style="background-image: linear-gradient(var(--color-earth-800) 1px, transparent 1px), linear-gradient(90deg, var(--color-earth-800) 1px, transparent 1px); background-size: 60px 60px;"
+        >
+        </div>
+    </div>
+
+    <div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
+        <!-- Main heading -->
+        <h1
+            class="font-display text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.1] mb-6 animate-slide-up"
+            style="animation-delay: 0.1s"
+        >
+            <span class="gradient-text">Your tools</span>
+            <br />
+            <span class="text-earth-900">should work for</span>
+            <br />
+            <span class="you-wrapper">
+                <span class="text-earth-900">you</span>
+                <svg
+                    class="squiggly"
+                    viewBox="0 0 100 12"
+                    preserveAspectRatio="none"
+                >
+                    <defs>
+                        <linearGradient
+                            id="squiggly-gradient"
+                            x1="0%"
+                            y1="0%"
+                            x2="100%"
+                            y2="0%"
+                        >
+                            <stop offset="0%" stop-color="#b19573"></stop>
+                            <stop offset="50%" stop-color="#5d8a4c"></stop>
+                            <stop offset="100%" stop-color="#7c9a6e"></stop>
+                        </linearGradient>
+                    </defs>
+                    <path
+                        class="squiggly-path"
+                        d="M0 6 Q 5 2, 10 6 T 20 6 T 30 6 T 40 6 T 50 6 T 60 6 T 70 6 T 80 6 T 90 6 T 100 6"
+                        stroke="url(#squiggly-gradient)"
+                        stroke-width="2.5"
+                        fill="none"
+                        stroke-linecap="round"></path>
+                </svg>
+            </span>
+        </h1>
+
+        <style>
+            .you-wrapper {
+                position: relative;
+                display: inline-block;
+                padding-bottom: 16px;
+            }
+
+            .squiggly {
+                position: absolute;
+                bottom: 0;
+                left: -5%;
+                width: 110%;
+                height: 12px;
+            }
+
+            .squiggly-path {
+                stroke-dasharray: 200;
+                stroke-dashoffset: 200;
+                animation:
+                    drawSquiggly 1s ease-out 0.8s forwards,
+                    swaySquiggly 3s ease-in-out 1.8s infinite;
+            }
+
+            @keyframes drawSquiggly {
+                to {
+                    stroke-dashoffset: 0;
+                }
+            }
+
+            @keyframes swaySquiggly {
+                0%,
+                100% {
+                    transform: translateX(0);
+                }
+                50% {
+                    transform: translateX(8px);
+                }
+            }
+        </style>
+
+        <!-- Subtitle -->
+        <p
+            class="text-xl md:text-2xl text-ink-600 max-w-2xl mx-auto mb-10 animate-slide-up text-balance"
+            style="animation-delay: 0.2s"
+        >
+            Milki Labs builds open-source, local-first personal tools that
+            respect user ownership and autonomy.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div
+            class="flex flex-col sm:flex-row items-center justify-center gap-4 animate-slide-up"
+            style="animation-delay: 0.3s"
+        >
+            <a
+                href="#projects"
+                class="group flex items-center gap-2 px-8 py-4 rounded-full bg-earth-900 text-cream-100 font-semibold text-lg hover:bg-earth-800 transition-all shadow-lg hover:shadow-xl"
+            >
+                Explore Projects
+                <svg
+                    class="w-5 h-5 group-hover:translate-x-1 transition-transform"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                </svg>
+            </a>
+            <a
+                href="#manifesto"
+                class="flex items-center gap-2 px-8 py-4 rounded-full border-2 border-earth-400 text-earth-800 font-semibold text-lg hover:bg-earth-100 transition-all"
+            >
+                Read Manifesto
+            </a>
+        </div>
+
+        <!-- Stats -->
+        <div
+            class="flex flex-wrap items-center justify-center gap-8 md:gap-16 mt-16 animate-slide-up"
+            style="animation-delay: 0.4s"
+        >
+            <div class="text-center">
+                <p class="font-display text-4xl font-bold text-earth-800">
+                    100%
+                </p>
+                <p class="text-ink-500 text-sm mt-1">Open Source</p>
+            </div>
+            <div class="w-px h-12 bg-earth-300 hidden sm:block"></div>
+            <div class="text-center">
+                <p class="font-display text-4xl font-bold text-earth-800">0</p>
+                <p class="text-ink-500 text-sm mt-1">Cloud Required</p>
+            </div>
+            <div class="w-px h-12 bg-earth-300 hidden sm:block"></div>
+            <div class="text-center">
+                <p class="font-display text-4xl font-bold text-earth-800">∞</p>
+                <p class="text-ink-500 text-sm mt-1">Your Data Ownership</p>
+            </div>
+        </div>
+    </div>
+</section>
