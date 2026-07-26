@@ -1,41 +1,59 @@
 ---
 import ProjectCard from "./ProjectCard.astro";
-import TasksAppIcon from '../assets/tasks-app.svg'
-import ZikraAppIcon from '../assets/zikra-icon.svg'
+// import TasksAppIcon from '../assets/tasks-app.svg'
+// import ZikraAppIcon from '../assets/zikra-icon.svg'
+import LauncherAppIcon from '../assets/milki-launcher-icon.svg'
 
 const projects = [
-    {
-        name: "Milki Tasks",
-        tagline: "A place to do what matters",
-        description:
-            "A task manager that puts you in control. Works completely offline, syncs on your terms, and keeps your tasks where they belong—with you.",
-        link: "https://milkilabs.github.io/tasks/",
-        icon: TasksAppIcon,
-        features: [
-            "Works offline, always",
-            "User-controlled sync via RemoteStorage",
-            "No account required to use",
-            "Your data stays on your device",
-        ],
-        gradient:
-            "bg-gradient-to-br from-earth-600 to-earth-800 text-cream-100",
-    },
-    {
-        name: "Zikra",
-        tagline: "A place to remember what matters",
-        description:
-            "A personal, local-first learning archive. Capture resources from YouTube, books, articles, papers, and more. Organize your knowledge and track your learning journey.",
-        link: "https://milkilabs.github.io/zikra/",
-        icon: ZikraAppIcon,
-        features: [
-            "Capture from YouTube, articles, books & papers",
-            "Organize with playlists and collections",
-            "Track your learning progress",
-            "Fully offline-capable",
-        ],
-        gradient:
-            "bg-gradient-to-br from-accent-500 to-accent-600 text-cream-100",
-    },
+{
+    name: "Milki Launcher",
+    tagline: "A home screen built around search",
+    description:
+        "A free and open source Android launcher built entirely from scratch. Search apps, contacts, files, and the web from one place, with no ads, no tracking, and no telemetry.",
+    link: "https://milkilabs.github.io/launcher/",
+    icon: LauncherAppIcon,
+    features: [
+        "Search-first home screen for apps, contacts, files, and the web",
+        "Clipboard-aware suggestions and smart URL detection",
+        "Custom search prefixes, like w for Wikipedia",
+        "Custom gestures and actions",
+        "No ads, no tracking, no telemetry",
+    ],
+    gradient:
+        "bg-gradient-to-br from-slate-600 to-slate-800 text-cream-100",
+},
+    // {
+    //     name: "Milki Tasks",
+    //     tagline: "A place to do what matters",
+    //     description:
+    //         "A task manager that puts you in control. Works completely offline, syncs on your terms, and keeps your tasks where they belong—with you.",
+    //     link: "https://milkilabs.github.io/tasks/",
+    //     icon: TasksAppIcon,
+    //     features: [
+    //         "Works offline, always",
+    //         "User-controlled sync via RemoteStorage",
+    //         "No account required to use",
+    //         "Your data stays on your device",
+    //     ],
+    //     gradient:
+    //         "bg-gradient-to-br from-earth-600 to-earth-800 text-cream-100",
+    // },
+    // {
+    //     name: "Zikra",
+    //     tagline: "A place to remember what matters",
+    //     description:
+    //         "A personal, local-first learning archive. Capture resources from YouTube, books, articles, papers, and more. Organize your knowledge and track your learning journey.",
+    //     link: "https://milkilabs.github.io/zikra/",
+    //     icon: ZikraAppIcon,
+    //     features: [
+    //         "Capture from YouTube, articles, books & papers",
+    //         "Organize with playlists and collections",
+    //         "Track your learning progress",
+    //         "Fully offline-capable",
+    //     ],
+    //     gradient:
+    //         "bg-gradient-to-br from-accent-500 to-accent-600 text-cream-100",
+    // },
 ];
 ---
 
